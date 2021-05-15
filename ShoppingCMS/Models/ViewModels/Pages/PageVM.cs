@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
-namespace ShoppingCMS.Models.ViewModels
+namespace ShoppingCMS.Models.ViewModels.Pages
 {
     public class PageVM
     {
@@ -29,6 +30,7 @@ namespace ShoppingCMS.Models.ViewModels
         public string Slug { get; set; }
         [Required]
         [StringLength(int.MaxValue, MinimumLength = 10)]
+        [AllowHtml]
         public string Body { get; set; }
         public int Sorting { get; set; }
         public bool HasSidebar { get; set; }
