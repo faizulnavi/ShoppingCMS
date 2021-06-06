@@ -69,15 +69,9 @@ else
         });
         //////////////////////////////////////
          /*/*
-         * Confirm Page Deletion
-        */
-        $("a.delete").click(function () {
-            if (!confirm("confirm page deletion")) return false;
-        });
-        //////////////////////////////////////
-        /*
          * Page Sorting
         */
+        
         $("table#pages tbody").sortable({
             items: "tr:not(.home)",
             placeholder: "ui-state-highlight",
